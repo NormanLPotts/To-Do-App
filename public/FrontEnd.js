@@ -1,4 +1,4 @@
-
+	
 	/** FrontEnd.js
 		Created by Norman Potts.
 		This javascript file uses ReactJS to manage the frontend of the Todoapp.
@@ -7,7 +7,7 @@
 		the server.js file. The list loads every time the page refreshes or after an input sent.
 		The componets are loaded into the 'App' div on the my.html file.
 	*/
-	const myhost = '69.17.168.67';//// Change when ip of server changes or set to 'localhost'.
+	const myhost = 'localhost';//// Change when ip of server changes or set to 'localhost'.
 
 	//// Begining of list component
 	var Mylist = React.createClass({ 				
@@ -28,8 +28,8 @@
 							}
 						}
 					}.bind(this);
-					//var url = 'http://localhost:3000/delete_task/';
-					var url = 'http://'+myhost+':3000/delete_task/'
+					//var url = 'http://localhost:3002/delete_task/';
+					var url = 'http://'+myhost+':3002/delete_task/'
 					http.open('POST', url, true);							
 					http.setRequestHeader('jsonInput', jsonItem);
 					http.send(  jsonItem  );															
@@ -50,8 +50,8 @@
 					}
 				}
 			}.bind(this);
-			//var url = 'http://localhost:3000/ChangeComplete/';
-			var url = 'http://'+myhost+':3000/ChangeComplete/'
+			//var url = 'http://localhost:3002/ChangeComplete/';
+			var url = 'http://'+myhost+':3002/ChangeComplete/'
 			http.open('POST', url, true);							
 			http.setRequestHeader('jsonInput', jsonItem);
 			http.send(  jsonItem  );												
@@ -122,8 +122,8 @@
 						}
 					}
 				}.bind(this);
-				//var url = 'http://localhost:3000/AddNote/';
-				var url = 'http://'+myhost+':3000/AddNote/'
+				//var url = 'http://localhost:3002/AddNote/';
+				var url = 'http://'+myhost+':3002/AddNote/'
 				http.open('POST', url, true);							
 				http.setRequestHeader('jsonInput', jsonItem);
 				http.send(  jsonItem  );
@@ -290,8 +290,8 @@
 						}
 					}
 				}.bind(this);
-				//var url = 'http://localhost:3000/recive_form/';
-				var url = 'http://'+myhost+':3000/recive_form/'
+				//var url = 'http://localhost:3002/recive_form/';
+				var url = 'http://'+myhost+':3002/recive_form/'
 				http.open('POST', url, true);							
 				http.setRequestHeader('jsonInput', jsonItem);
 				http.send(  jsonItem  );		
@@ -357,8 +357,8 @@
 					this.setState({   internalArr: records  });												
 				}
 			}.bind(this);
-			//var url = 'http://localhost:3000/table/';
-			var url = 'http://'+myhost+':3000/table/'
+			//var url = 'http://localhost:3002/table/';
+			var url = 'http://'+myhost+':3002/table/'
 			http.open('GET', url, true);										
 			http.send();								
 		},	    

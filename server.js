@@ -14,7 +14,7 @@ const http = require('http').Server.app;
 const path = require('path');
 const fs = require('fs');  
 const hostname = '127.0.0.1';
-const port = 3000;
+const port = 3002;
 const sqlite3 = require("sqlite3").verbose();
 
 
@@ -50,7 +50,7 @@ const app = express();
 
 ////Set Static Path to Public folder.
 app.use(express.static(path.join(__dirname,'public')));
-
+ 
 
 ////Set up server, listening at http://127.0.0.1:3000
 app.listen(port, function() {
